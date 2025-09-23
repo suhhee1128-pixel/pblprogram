@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+    <meta charset="UTF-8">
+    <!-- 모바일 반응형 웹을 위한 필수 설정
+         width=device-width: 화면 너비를 기기의 실제 너비에 맞춤
+         initial-scale=1.0: 초기 확대/축소 비율을 100%로 설정
+         이게 없으면 모바일에서 웹페이지가 작게 축소되어 표시됨 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스마트 워치 - Tailwind 버전</title>
+
+    <!-- 👇 Tailwind CSS CDN으로 빠르게 스타일링 -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- 폰트 로드: Ubuntu (기본), Bitcount(사용 시) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bitcount+Prop+Double+Ink:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body class="font-['Ubuntu'] bg-gray-50">
+
+
+    <!-- 상단 네비게이션 -->
+    <header class="bg-black shadow-sm sticky top-0 z-50">
+        <div class="max-w-[90rem] mx-auto px-6 py-4 flex justify-between items-center">
+    
+  <!-- Left: Logo/Title -->
+        <div    
+    <span class="text-xl font-extrabold text-white">2025-2 PBL</span>
+        </div>
+  
+  <!-- Center: Pill nav -->
+  <nav class="hidden md:flex items-center mx-4 flex-1 justify-center">
+    <div class="flex items-center gap-10 rounded-full bg-white/70 backdrop-blur-sm ring-1 ring-black/5 px-8 py-3 shadow-sm">
+      <a href="#introduction" class="text-gray-800 hover:text-gray-900 font-medium">Introduction</a>
+      <a href="#members" class="text-gray-800 hover:text-gray-900 font-medium">Members</a>
+      <a href="#contact" class="text-gray-800 hover:text-gray-900 font-medium">Contact</a>
+    </div>
+  </nav>
+  
+  <!-- Right: Apply button -->
+  <div class="flex items-center">
+    <a href="#apply"
+       class="inline-flex items-center rounded-xl bg-gray-200 px-8 py-2.5 text-black font-semibold shadow-sm hover:bg-yellow">
+      Apply
+    </a>
+  </div>
+        </div>
+    </header>
+
+    <section class="bg-black">
+        <div class="mx-auto max-w-[80rem] px-6 lg:px-8 py-20 lg:py-24">
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+            <!-- Left: Headline + Sub -->
+            <div>
+              <h1 class="font-['Bitcount_Prop_Double_Ink'] text-[120px] sm:text-[128px] md:text-[164px] lg:text-[150px] font-extrabold tracking-tight leading-[0.9] text-gray-900">
+                KMU<br />
+                PBL<br />
+                PROGRAM
+              </h1>
+              <p class="mt-8 max-w-xl text-lg sm:text-xl text-white">
+                Broaden your horizons, embrace new experiences, and grow beyond borders – all in one program.
+              </p>
+            </div>
+      
+            <!-- Right: Image -->
+            <div class="flex justify-center lg:justify-end">
+              <img
+                src="C:\Users\김서희\Desktop\fullstack\tailwind\KakaoTalk_20250923_181553737.jpg"
+                alt="사진"
+                class="w-[80px] sm:w-[100px] md:w-[360px] lg:w-[420px] h-auto object-contain rounded-xl shadow-2xl"
+                loading="lazy"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+    <!-- 기능 소개 섹션 -->
+    <section id="introduction" class="relative py-20 md:py-24 bg-gray-100 scroll-mt-24 md:scroll-mt-32">
+        <div aria-hidden="true" class="absolute inset-x-0 -top-14 h-28 bg-black z-0"></div>
+        <div class="relative z-10 max-w-[90rem] mx-auto px-6 md:px-8 bg-white rounded-[96px] overflow-hidden pt-24 pb-40">
+
+            <h2 class="mt-16 md:mt-18 text-4xl font-bold text-center text-gray-800 mb-16">
+               Introduction
+            </h2>
+
+            <ul class="grid grid-cols-1 md:grid-cols-3 gap-x-16 gap-y-12 md:gap-y-16 items-start">
+                <li class="space-y-6 text-left">
+                  <h3 class="font-['Ubuntu'] text-6xl  md:text-8xl font-black leading-none tracking-tight">AI.</h3>
+                  <p class="text-black/80 text-lg md:text-xl leading-relaxed max-w-[42ch]">
+                    Leverage technology to shape the future of innovation.
+                  </p>
+                </li>
+                <li class="space-y-6">
+                  <h3 class="font-['Ubuntu'] text-6xl  md:text-8xl font-black leading-none tracking-tight">DREAM.</h3>
+                  <p class="text-black/80 text-lg md:text-xl leading-relaxed max-w-[42ch]">
+                    Turn your vision into real impact.
+                  </p>
+                </li>
+                <li class="space-y-6">
+                  <h3 class="font-['Ubuntu'] text-6xl  md:text-8xl font-black leading-none tracking-tight">GLOBAL.</h3>
+                  <p class="text-black/80 text-lg md:text-xl leading-relaxed max-w-[42ch]">
+                    Hands-on projects that connect you to the world.
+                  </p>
+                </li>
+              </ul>
+            </div>
+          </section>
+
+    <!-- Members 섹션 -->
+    <section id="members" class="py-20 bg-gray-100 scroll-mt-24 md:scroll-mt-32">
+        <div class="max-w-[90rem] mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center text-gray-800 mb-16">
+                Members
+            </h2>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- 후기 1 -->
+                <div class="bg-white p-8 rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center text-white font-bold text-xl">
+                            K
+                        </div>
+                        <div class="ml-4">
+                            <div class="font-semibold text-gray-800">Maeve</div>
+                            <div class="text-yellow-400">⭐⭐⭐⭐⭐</div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 leading-relaxed">
+                        "What stood out to me was the balance between learning and doing. 
+                        We weren’t just studying theories—we were building solutions that could actually make an impact."
+                    </p>
+                </div>
+
+                <!-- 후기 2 -->
+                <div class="bg-white p-8 rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold text-xl">
+                            J
+                        </div>
+                        <div class="ml-4">
+                            <div class="font-semibold text-gray-800">Jasmine</div>
+                            <div class="text-yellow-400">⭐⭐⭐⭐⭐</div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 leading-relaxed">
+                        "The PBL program gave me my very first chance to collaborate with international teammates. 
+                        I realized how powerful diverse perspectives can be when solving real-world problems."
+                    </p>
+                </div>
+
+                 <!--후기3-->
+            <div class="bg-white p-8 rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300">
+                <div class="flex items-center mb-4">
+                    <div class="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold text-xl">
+                        ch
+                    </div>
+                    <div class="ml-4">
+                        <div class="font-semibold text-gray-800">Chae</div>
+                        <div class="text-yellow-400">⭐⭐⭐⭐⭐</div>
+                    </div>
+                </div>
+                <p class="text-gray-600 leading-relaxed">
+                    "Before joining, I wasn’t confident about my English or presentation skills. 
+                    By the end, I led our final pitch in front of industry mentors. It was life-changing."
+                </p>
+            </div>
+
+            <!--후기4-->
+    
+               <div class="bg-white p-8 rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300">
+                <div class="flex items-center mb-4">
+                    <div class="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold text-xl">
+                        Y
+                    </div>
+                    <div class="ml-4">
+                        <div class="font-semibold text-gray-800">YY</div>
+                        <div class="text-yellow-400">⭐⭐⭐⭐⭐</div>
+                    </div>
+                </div>
+                <p class="text-gray-600 leading-relaxed">
+                    "The AI-focused project gave me practical skills I could directly use in my career. 
+                    Now I feel more prepared to apply for internships abroad."
+                </p>
+            </div>
+
+            <!--후기5-->
+    
+        <div class="bg-white p-8 rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300">
+            <div class="flex items-center mb-4">
+                <div class="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold text-xl">
+                    L
+                </div>
+                <div class="ml-4">
+                    <div class="font-semibold text-gray-800">Lumy</div>
+                    <div class="text-yellow-400">⭐⭐⭐⭐⭐</div>
+                </div>
+            </div>
+            <p class="text-gray-600 leading-relaxed">
+                "Networking was the highlight for me. I met peers who later became collaborators and 
+                even close friends. It felt like a real global community.""
+            </p>
+        </div>
+
+        <!--후기6-->
+    
+    <div class="bg-white p-8 rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300">
+        <div class="flex items-center mb-4">
+            <div class="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold text-xl">
+                J
+            </div>
+            <div class="ml-4">
+                <div class="font-semibold text-gray-800">Jian</div>
+                <div class="text-yellow-400">⭐⭐⭐⭐⭐</div>
+            </div>
+        </div>
+        <p class="text-gray-600 leading-relaxed">
+            "The program pushed me outside my comfort zone. 
+            Working with people from different cultures challenged me, but also helped me grow both professionally and personally."
+        </p>
+    </div>
+        
+            </div>
+        </div>
+    </section>
+
+           
+
+    <!-- 가격 섹션 -->
+    <section id="price" class="py-20 bg-white">
+        <div class="max-w-[70rem] mx-auto px-6 text-center">
+            <h2 class="text-4xl font-bold text-gray-800 mb-16">
+                Schalorships
+            </h2>
+
+            <div class="bg-black text-white rounded-3xl p-12 shadow-2xl transform hover:scale-105 transition-transform duration-300">
+                <div class="mb-8">
+                    <div class="text-6xl font-bold mb-2">5,000,000 KRW</div>
+                    <div class="text-xl opacity-90">Exclusively for PBL participants</div>
+                </div>
+
+                <div class="space-y-4 mb-8 text-left max-w-md mx-auto">
+                    <div class="flex items-center">
+                        <span class="text-2xl mr-3">✅</span>
+                        <span>Covers up to 6 months of program fees</span>
+                    </div>
+                    <div class="flex items-center">
+                        <span class="text-2xl mr-3">✅</span>
+                        <span>Eligible for international internship opportunities</span>
+                    </div>
+                    <div class="flex items-center">
+                        <span class="text-2xl mr-3">✅</span>
+                        <span>Includes mentoring & project guidance</span>
+                    </div>
+                    <div class="flex items-center">
+                        <span class="text-2xl mr-3">✅</span>
+                        <span>Supports up to 6 participants per term</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Us -->
+    <section id="contact" class="py-20 bg-gray-100 scroll-mt-24 md:scroll-mt-32">
+        <div class="max-w-[90rem] mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center text-gray-800 mb-16">
+                📞 Contact Us
+            </h2>
+
+            <div class="bg-white rounded-3xl shadow-xl p-8 md:p-12">
+                <div class="grid md:grid-cols-2 gap-12">
+                    <!-- 연락처 정보 -->
+                    <div>
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-6">Contact Information
+                        </h3>
+                        <div class="space-y-4">
+                            <div class="flex items-center">
+                                <span class="text-2xl mr-4">📞</span>
+                                <span class="text-gray-700">02-1234-5678</span>
+                            </div>
+                            <div class="flex items-center">
+                                <span class="text-2xl mr-4">✉️</span>
+                                <span class="text-gray-700">contact@pbl.co.kr</span>
+                            </div>
+                            <div class="flex items-center">
+                                <span class="text-2xl mr-4">📍</span>
+                                <span class="text-gray-700">123 Teheran-ro, Gangnam-gu, Seoul</span>
+                            </div>
+                            <div class="flex items-center">
+                                <span class="text-2xl mr-4">🕒</span>
+                                <span class="text-gray-700">Mon–Fri, 9:00 AM – 6:00 PM</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 문의 폼 -->
+                    <div>
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-6">Quick Inquiry</h3>
+                        <form class="space-y-4">
+                            <input type="text"
+                                   placeholder="name"
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent outline-none transition">
+                            <input type="email"
+                                   placeholder="e-mail"
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent outline-none transition">
+                            <textarea placeholder="write down your question..."
+                                      rows="4"
+                                      class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent outline-none transition resize-none"></textarea>
+                            <button type="button"
+                                    onclick="alert('📧 Your inquiry has been received! We will get back to you as soon as possible.')"
+                                    class="w-full bg-black hover:bg-yellow text-white py-3 rounded-lg font-semibold transition-colors duration-300">
+                                send
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 푸터 -->
+    <footer class="bg-black text-white py-12">
+        <div class="max-w-[90rem]    mx-auto px-6 text-center">
+            <div class="mb-6">
+                <h3 class="text-2xl font-bold text-white-400 mb-2">KMU GLOBAL PBL PROGRAM</h3>
+                <p class="text-white">make your dream come true</p>
+            </div>
+
+
+            <div class="border-t border-black pt-6">
+                <p class="text-gray-400 mb-2">&copy; 2025 SmartWatch. All rights reserved.</p>
+                <p class="text-sm text-white">Global PBL Week 2 project - Tailwind CSS</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript 코드 -->
+    <script>
+        // 스무스 스크롤 함수
+        function smoothScroll(target) {
+            document.querySelector(target).scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+
+        // 네비게이션 링크에 스무스 스크롤 적용
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = this.getAttribute('href');
+                smoothScroll(target);
+            });
+        });
+
+        // 페이지 로드 시 메시지
+        window.onload = function() {
+            console.log('🎨 Tailwind CSS로 만든 랜딩 페이지입니다!');
+            console.log('💡 개발자 도구에서 Tailwind 클래스들을 확인해보세요!');
+        };
+    </script>
+</body>
+</html>
